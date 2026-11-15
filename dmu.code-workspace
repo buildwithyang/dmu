@@ -1,0 +1,47 @@
+{
+  "folders": [
+    {
+      "name": "dmu",
+      "path": "."
+    }
+  ],
+  "settings": {
+    // 所有子项目共用根级 .venv
+    "python.defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python",
+    "python.terminal.activateEnvironment": true,
+
+    // Notebook 的工作目录设为 notebook 所在目录，方便读取同级 data/
+    "jupyter.notebookFileRoot": "${fileDirname}",
+
+    // Python 文件用 ruff 格式化
+    "[python]": {
+      "editor.defaultFormatter": "charliermarsh.ruff",
+      "editor.formatOnSave": true
+    },
+    "editor.rulers": [88],
+    "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": true,
+
+    // 文件浏览器里隐藏噪音
+    "files.exclude": {
+      "**/__pycache__": true,
+      "**/.ipynb_checkpoints": true,
+      "**/.DS_Store": true
+    },
+    "search.exclude": {
+      "**/.venv": true,
+      "**/uv.lock": true
+    },
+    "files.watcherExclude": {
+      "**/.venv/**": true
+    }
+  },
+  "extensions": {
+    "recommendations": [
+      "ms-python.python",
+      "ms-python.vscode-pylance",
+      "ms-toolsai.jupyter",
+      "charliermarsh.ruff"
+    ]
+  }
+}

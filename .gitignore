@@ -1,0 +1,13 @@
+.venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.DS_Store
+
+# Data and model checkpoints: too large for git, and the corpus is downloaded separately
+chat_bot/data/
+chat_bot2/data/
+*.tar
+
+# Local secrets (API keys)
+.env
